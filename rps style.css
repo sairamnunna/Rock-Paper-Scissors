@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #081b31;
+    color: white;
+    height: 5rem;
+    line-height: 5rem; /* for vertically it will align center */
+}
+
+/* Style for Login Page */
+#login-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full page height */
+    background-color: #bbe8ec;
+    color: #081b31;
+    font-family: Arial, sans-serif;
+}
+
+#login-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#login-section label {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: left;
+    width: 200px;
+}
+
+#login-section input {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    width: 300px;
+    margin: 10px 0;
+    border: 2px solid #081b31;
+    border-radius: 0.5rem;
+}
+
+#login-section input[type="password"] {
+    margin-top: 10px;
+}
+
+#login-section button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #081b31;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+#login-section button:hover {
+    background-color: #044ca3;
+}
+
+#login-error {
+    font-size: 1.2rem;
+    color: red;
+    margin-top: 1rem;
+    display: none;
+}
+
+
+
+
+#game-section {
+    display: none; /* Initially hidden */
+}
+
+/* Style for the Game Page */
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    gap: 5rem;
+}
+
+#user-score,
+#comp-score {
+    font-size: 4rem;
+}
+
+.msg-container {
+    margin-top: 5rem;
+}
+
+#msg {
+    background-color: #081b31;
+    color: white;
+    line-height: 5rem;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#reset-btn {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #081b31;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#reset-btn:hover {
+    background-color: #06478c;
+}
+
+
+@keyframes flash-background-green {
+    0%, 100% {
+        background-color: #081b31;
+    }
+    50% {
+        background-color: #4CAF50; /* Flash green for user win */
+    }
+}
+
+@keyframes flash-background-red {
+    0%, 100% {
+        background-color: #081b31;
+    }
+    10% {
+        background-color: #FF0000; 
+    }
+}
+
+#game-section.celebrate-green {
+    animation: flash-background-green 0.5s ease-in-out infinite;
+}
+
+#game-section.celebrate-red {
+    animation: flash-background-red 0.5s ease-in-out infinite;
+}
